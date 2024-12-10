@@ -1,0 +1,35 @@
+<div class="container">
+    
+    <h2><i (click)="goBack()" class="fa-solid fa-backward"></i></h2>
+</div>
+<form [formGroup]="userForm"(ngSubmit)="onSubmit()">
+    <div class="title">
+        <h3>{{isEdit ? "Update Order Details": "Add Order Details"}}</h3>
+    </div>
+    
+    <div class="input-field">
+        <label for="">Dish name</label>
+        <input type="text" formControlName="productname"
+        [ngClass]="{'error':userForm.controls['productname'].touched && userForm.controls['productname'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label for="">Price</label>
+        <input type="number" formControlName="productsku"
+        [ngClass]="{'error':userForm.controls['productsku'].touched && userForm.controls['productsku'].invalid}"/>
+        
+    </div>
+    <div class="input-field">
+        <label for="">Payment Mode</label>
+        <select name="productType" formControlName="category">
+            <option value="" selected>SELECT FOOD TYPE</option>
+            <option *ngFor="let ut of productType" value={{ut}}>{{ut}}</option>
+        </select>
+    </div>
+    
+    <button  [disabled]="userForm.invalid" type="submit">
+        {{isEdit ? "Update Your Order": "Add Your Order"}}
+    </button>
+
+</form>
+<app-loader *ngIf="loading"></app-loader>
+

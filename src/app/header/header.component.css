@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 3%;
+    background-color: navy;
+}
+.container h2{
+    letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.container button{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in 0.25s;
+}
+/* .container button:active{
+    background-color: white;
+    color: navy;
+} */
+
+.container  .btn{
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in 0.25s;
+}
+.container  .btn:active{
+    background-color: white;
+    color: navy;
+}
